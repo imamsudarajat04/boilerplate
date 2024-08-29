@@ -21,6 +21,6 @@ class ButtonEdit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.button-edit');
+        return view('components.button-edit');
     }
 }

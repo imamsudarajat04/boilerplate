@@ -21,6 +21,6 @@ class EmptyData extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.empty-data');
+        return view('components.empty-data');
     }
 }

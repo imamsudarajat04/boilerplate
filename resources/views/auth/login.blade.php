@@ -55,7 +55,9 @@
         </div>
         <div class="col-lg-7 d-none d-lg-block">
             <div id="auth-right">
-
+                <div class="animated-logo">
+                    <img src="{{ asset('dist/assets/compiled/svg/logo.svg') }}" alt="Animated Logo">
+                </div>
             </div>
         </div>
     </div>

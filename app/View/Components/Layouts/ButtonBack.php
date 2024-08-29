@@ -24,6 +24,6 @@ class ButtonBack extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.button-back');
+        return view('components.button-back');
     }
 }

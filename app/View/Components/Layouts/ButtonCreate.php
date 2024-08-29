@@ -21,6 +21,6 @@ class ButtonCreate extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.button-create');
+        return view('components.button-create');
     }
 }

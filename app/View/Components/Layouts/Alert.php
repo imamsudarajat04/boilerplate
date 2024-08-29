@@ -21,6 +21,6 @@ class Alert extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.alert');
+        return view('components.alert');
     }
 }
