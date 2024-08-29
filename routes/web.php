@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('components.layouts.dashboard.layout', ['_title' => 'Testing']);
+Route::prefix("auth")->name("auth")->controller(\App\Http\Controllers\Auth\AuthController::class)->group(function () {
+    Route::get("", "login")->name("login");
+    Route::post("authenticate", "authenticate")->name("authenticate");
+    Route::post("logout", "logout")->name("logout");
 });
