@@ -6,6 +6,18 @@ use App\Enums\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Spatie\Permission\Models\Permission as SpatiePermission;
+use Carbon\Carbon;
+
+/**
+ * @property string id
+ * @property string name
+ * @property string guard_name
+ * @property string label
+ * @property string description
+ * @property string feature_group
+ * @property Carbon created_at
+ * @property Carbon updated_at
+ */
 
 #[Fillable(['name', 'guard_name', 'label', 'description', 'feature_group'])]
 #[Table(Table::PERMISSIONS->value)]

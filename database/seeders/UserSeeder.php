@@ -16,8 +16,8 @@ class UserSeeder extends Seeder
             "id" => "9d52d0f0-d0fa-44a4-b587-346706efcb01",
             "first_name" => "Imam",
             "last_name" => "Sudarajat",
-            "email" => "[EMAIL_ADDRESS]",
-            "password" => "[PASSWORD]",
+            "email" => "superadmin@mail.com",
+            "password" => "password",
             "is_active" => true,
             "roles" => [
                 Role::SUPER_ADMIN->value,
