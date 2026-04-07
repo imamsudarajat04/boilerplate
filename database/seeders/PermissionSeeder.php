@@ -8,6 +8,8 @@ use App\Enums\Permission;
 
 class PermissionSeeder extends Seeder
 {
+    private const GUARD_NAME = 'web';
+
     /**
      * Run the database seeds.
      */
@@ -19,7 +21,7 @@ class PermissionSeeder extends Seeder
                 'label'         => $permission['label'],
                 'description'   => $permission['description'],
                 'feature_group' => $permission['feature_group'],
-                'guard_name'    => 'web',
+                'guard_name'    => self::GUARD_NAME,
             ]);
         }
     }

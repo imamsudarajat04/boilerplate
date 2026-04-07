@@ -4,6 +4,7 @@ namespace App\Enums;
 
 use App\Enums\Permissions\UserPermission;
 use App\Enums\Permissions\RolePermission;
+use App\Enums\Permissions\AclPermission;
 
 enum Permission: string
 {
@@ -12,6 +13,7 @@ enum Permission: string
         return [
             ...UserPermission::cases(),
             ...RolePermission::cases(),
+            ...AclPermission::cases(),
         ];
     }
 
