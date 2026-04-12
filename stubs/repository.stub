@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Contracts\Repositories\Abstracts\BaseRepository;
+use App\Models\{{ modelName }};
+use App\Support\Attributes\ForModel;
+
+#[ForModel({{ modelName }}::class)]
+class {{ className }} extends BaseRepository
+{
+    //
+}

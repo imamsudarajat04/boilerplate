@@ -12,30 +12,42 @@ trait ProfileValidationRules
      *
      * @return array<string, array<int, \Illuminate\Contracts\Validation\Rule|array<mixed>|string>>
      */
-    protected function profileRules(?int $userId = null): array
+    protected function profileRules(?string $userId = null): array
     {
         return [
-            'name' => $this->nameRules(),
+            'first_name' => $this->firstNameRules(),
+            'last_name' => $this->lastNameRules(),
             'email' => $this->emailRules($userId),
+            'roles' => $this->roleRules(),
         ];
     }
 
     /**
-     * Get the validation rules used to validate user names.
+     * Get the validation rules used to validate user first name.
      *
      * @return array<int, \Illuminate\Contracts\Validation\Rule|array<mixed>|string>
      */
-    protected function nameRules(): array
+    protected function firstNameRules(): array
     {
         return ['required', 'string', 'max:255'];
     }
 
     /**
+     * Get the validation rules used to validate user last name
+     *
+     * @return string[]
+     */
+    protected function lastNameRules(): array
+    {
+        return ['nullable', 'string', 'max:255'];
+    }
+
+    /**
      * Get the validation rules used to validate user emails.
      *
-     * @return array<int, \Illuminate\Contracts\Validation\Rule|array<mixed>|string>
+     * @return array<string, \Illuminate\Contracts\Validation\Rule|array<mixed>|string>
      */
-    protected function emailRules(?int $userId = null): array
+    protected function emailRules(?string $userId = null): array
     {
         return [
             'required',
@@ -46,5 +58,13 @@ trait ProfileValidationRules
                 ? Rule::unique(User::class)
                 : Rule::unique(User::class)->ignore($userId),
         ];
+    }
+
+    /**
+     * @return string[]
+     */
+    protected function roleRules(): array
+    {
+        return ['nullable', 'array', 'min:0'];
     }
 }

@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Services;
+
+// use App\Repositories\YourRepository;
+// use App\Support\Attributes\Repository;
+
+// #[Repository(YourRepository::class)]
+final readonly class {{ className }}
+{
+     public function __construct() {}
+}
