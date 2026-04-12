@@ -15,6 +15,7 @@ import {
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { dashboard } from '@/routes';
+import { index as permissionsIndex } from '@/routes/user-management/permissions';
 import type { NavGroup, NavItem } from '@/types';
 
 const navGroups: NavGroup[] = [
@@ -46,7 +47,7 @@ const navGroups: NavGroup[] = [
                     },
                     {
                         title: 'Permissions',
-                        href: '/settings/security',
+                        href: permissionsIndex.url(),
                     }
                 ],
             },

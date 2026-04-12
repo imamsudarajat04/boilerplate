@@ -149,9 +149,9 @@ return [
         Features::emailVerification(),
         Features::twoFactorAuthentication([
             'confirm' => true,
-            'confirmPassword' => true,
+            // Require re-entering password before visiting Security settings — set true to enable.
+            'confirmPassword' => false,
             // 'window' => 0
         ]),
     ],
-
 ];

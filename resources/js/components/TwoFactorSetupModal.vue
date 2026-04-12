@@ -25,8 +25,8 @@ import { confirm } from '@/routes/two-factor';
 import type { TwoFactorConfigContent } from '@/types';
 
 type Props = {
-    requiresConfirmation: boolean;
-    twoFactorEnabled: boolean;
+    requiresConfirmation: boolean | undefined;
+    twoFactorEnabled: boolean | undefined;
 };
 
 const { resolvedAppearance } = useAppearance();
